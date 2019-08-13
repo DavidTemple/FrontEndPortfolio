@@ -1,0 +1,201 @@
+<html lang="en"><head>
+
+  <title> Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.min.js"></script>
+
+
+
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 {
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 {
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 {
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 {
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+<h1>David Templeton</h1>
+<footer>
+	<nav>
+	<ul>
+		<li><a href="index.html">The Complex World of David Templeton</a> -</li>
+		<li><a href="index.html">Home</a></li>
+	</ul>
+	</nav>
+</footer>
+
+<script>
+"use strict";
+
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(25, window.innerWidth/window.innerHeight, 0.1, 1000);
+			// 75 = FOV (Field of View).
+
+            //var renderer = new THREE.WebGLRenderer();
+			var renderer = new THREE.WebGLRenderer({ alpha: true });  // transparent background color is possible
+			renderer.setClearColor( 0xffffff, 1); // teal bg color, opacity 1.
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+			var spheregeometry = new THREE.SphereGeometry(-1.0, 50, 20);
+			var spherematerial = new THREE.MeshBasicMaterial({wireframe: true, color: 0xaaaaa});
+			var sphere = new THREE.Mesh(spheregeometry, spherematerial);
+
+			//sphere.position.set(-2.0, 0, 0);
+
+			scene.add(sphere);
+
+            camera.position.z = 5;
+			sphere.rotation.x += 50;
+
+            var render = function () {
+                requestAnimationFrame(render);
+
+                //cube.rotation.y += 0.01;
+                //cube.rotation.x += 0.01;
+                //cube.rotation.z += 0.01;
+				//sphere.rotation.x += 0.01;
+				sphere.rotation.y += 0.001;
+
+                renderer.render(scene, camera);
+            };
+
+            // Calling the render function
+            render();
+</script><canvas width="1440" height="685" style="width: 1440px; height: 685px;"></canvas><canvas width="1362" height="25" style="width: 1362px; height: 25px;"></canvas>
+
+
+
+
+
+      var text = '     I am a Computer Science and Information Technology Major with a minor in Graphic Design. I went to highschool in 2 different states: Atlanta , Georgia and Battle Creek , Michigan and since graducating I have continued my education at Graceland University located in Lamoni ,Iowa. Since I was young I have had a growing fascination with technology (notably video games) and have always wanted to figure out the logic behind the magic. Graceland has allowed me to do so and for that I am grateful. However if it wasnt for basketball, another major influence on my life I wouldnt have had the opportunity to do so. I was recruited to Graceland senior year of highschool and offered a scholarship to play the sport that I loved. Since accepting my offer I have worked rigorously to pursue the education that I have longed for since a child while juggling the many challenges of being a collegiate athlete.';
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="so.html">Projects</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Who Am I?</h3>
+  <img src="flydt.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>I'm <b>D</b>avid <b>T</b>empleton</h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">What Am I?</h3>
+  <p>      I am a Computer Science and Information Technology Major with a minor in Graphic Design. I went to highschool in 2 different states: Atlanta , Georgia and Battle Creek , Michigan and since graducating I have continued my education at Graceland University located in Lamoni ,Iowa. Since I was young I have had a growing fascination with technology (notably video games) and have always wanted to figure out the logic behind the magic. Graceland has allowed me to do so and for that I am grateful. However if it wasnt for basketball, another major influence on my life I wouldnt have had the opportunity to do so. I was recruited to Graceland senior year of highschool and offered a scholarship to play the sport that I loved. Since accepting my offer I have worked rigorously to pursue the education that I have longed for since a child while juggling the many challenges of being a collegiate athlete.</p>
+  <a href="#" class="btn btn-default btn-lg">
+
+  </a>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">
+  <h3 class="margin">Where To Find Me?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Random Tweets about my life. More personal account, nothing fancy, just a twitter.</p>
+      <a href="https://www.twitter.com/daviddelaw" target="_self">
+	<img src="blacktwitter.png" class="img-responsive margin" style="width:100%" alt="Image">
+	</a>
+    </div>
+    <div class="col-sm-4">
+      <p>My Linked in Account. You can add me here if you like as well as find my resume , endorsed skills, and a list of connections ive made on this website.</p>
+      <a href="https://www.linkedin.com/in/david-templeton-044186b4" target="_self">
+	<img src="linkedin.png" class="img-responsive margin" style="width:100%" alt="Image">
+	</a>
+    </div>
+    <div class="col-sm-4">
+      <p>Here you can add me on Facebook and follow pictures I post of friends and family.</p>
+     <a href="https://www.facebook.com/DavidDelawrenceTempleton" target="_self">
+	<img src="Facebook.png" class="img-responsive margin" style="width:100%" alt="Image">
+	</a>
+    </div>
+  </div>
+</div>
+
+<h1>Leave a Comment!</h1><h1>
+
+		<form action="" method="POST">
+
+			<label> Name:
+				<input type="text" name="Name" class="Input" style="width 225px" required="">
+			</label>
+			<br><br>
+			<label> Comment:<br>
+				<textarea name="Comment" class="Input" style="width: 300px" required=""></textarea>
+			</label>
+			<br><br>
+			<input type="submit" name="Submit" value="Submit Comment" class="Submit">
+
+		</form>
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p> David Templeton</p>
+<a href="http://validator.w3.org/check?uri=referer"> <br>
+			<img src="http://alt.graceland.edu/~belmore/html5-logo.png" alt="Valid HTML 5.0" height="31" width="88"></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"></a>
+</footer>
+
+
+</h1></body></html>
